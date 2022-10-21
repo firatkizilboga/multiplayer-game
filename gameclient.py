@@ -26,6 +26,7 @@ player_y_change = 0
 #Game Loop
 running = True
 while running:
+    screen.fill((0,0,0))
     opponent = client_side_funcs.GET(name,ip,port)
     if opponent == "no opponent":
         pass
@@ -53,7 +54,6 @@ while running:
             if chr(event.key) == 'w':
                 player_y_change=0
 
-    screen.fill((0,0,0))
     x = x + player_x_change
     y = y + player_y_change
     client_side_funcs.POST(name,ip,port,x,y)
