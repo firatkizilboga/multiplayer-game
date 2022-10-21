@@ -5,7 +5,7 @@ def createServer():
     serversocket = socket(AF_INET, SOCK_STREAM)
     player_objects = {}
     try :
-        serversocket.bind((gethostbyname(gethostname()),9000))
+        serversocket.bind(("192.168.1.106",9000))
         serversocket.listen(5)
         while(1):
             (clientsocket, address) = serversocket.accept()
