@@ -11,7 +11,9 @@ def GET(name,ip,port):
         data = mysock.recv(512)
         if len(data) < 1:
             break
-    return Package.read_json(data.decode())
+        data = data.decode()
+        print(data)
+        return Package.read_json(data)
 
 def POST(name,ip,port,x,y):
     p=Package(name,"POST",x,y)
