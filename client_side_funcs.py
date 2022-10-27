@@ -1,5 +1,5 @@
 import socket
-from packagedatatypes import Package
+from datatypes import Package
 def GET(name,ip,port):
     p=Package(name,"GET",0,0)
     mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
