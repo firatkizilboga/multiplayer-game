@@ -6,7 +6,7 @@ import os
 def clear():
     os.system('clear')
 user = input("Enter username: ")
-ip = "172.20.10.4"#input("Enter server ip: ")
+ip = "192.168.1.105"#input("Enter server ip: ")
 port = 9000 #int(input("Enter server port: "))
 
 connectionHandler = ConnectionHandler(ip,port,user)
