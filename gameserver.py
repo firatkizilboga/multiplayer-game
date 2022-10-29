@@ -10,7 +10,7 @@ def createServer():
     getters = {}
     killcounts = {}
     try :
-        serversocket.bind(("localhost",9000))
+        serversocket.bind(("172.20.10.4",9000))
         serversocket.listen()
         while(1):
             (clientsocket, address) = serversocket.accept()

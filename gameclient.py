@@ -6,7 +6,7 @@ import os
 def clear():
     os.system('clear')
 user = input("Enter username: ")
-ip = "localhost"#input("Enter server ip: ")
+ip = "172.20.10.4"#input("Enter server ip: ")
 port = 9000 #int(input("Enter server port: "))
 
 connectionHandler = ConnectionHandler(ip,port,user)
@@ -81,13 +81,13 @@ while running:
             running=False
         if event.type == pygame.KEYDOWN:
             if chr(event.key) == 'a':
-                player.angular_velocity_ = -1
+                player.angular_velocity_ = -2
             if chr(event.key) == 'd':
-                player.angular_velocity_ = +1
+                player.angular_velocity_ = +2
             if chr(event.key) == 's':
-                player.velocit_ = -1
+                player.velocity_ = -3
             if chr(event.key) == 'w':
-                player.velocity_ = 1
+                player.velocity_ = 3
             if event.key == 32:
                 object_counter += 1
                 bullet_oid = user + "-" + str(object_counter)

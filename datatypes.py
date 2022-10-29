@@ -76,7 +76,7 @@ class Player(GameObject):
 class Bullet(GameObject):
     def __init__(self,x,y,w,oid=None,img='bullet.png'):
         super().__init__(x,y,w,oid,img)
-        self.velocity_ = 4
+        self.velocity_ = 6
         self.distance_ = 0
     def move(self):
             self.x += -self.velocity_*math.cos(math.radians(self.w))
